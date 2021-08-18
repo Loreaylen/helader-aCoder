@@ -1,0 +1,66 @@
+ [
+
+{
+        "nombre": "Frutilla",
+        "imagen": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-strawberry-pink-ice-cream-scoop-with-chocolate-slice-png-image_4991120.jpg",
+        "texto": "Delicioso helado de crema con trozos de frutilla "
+
+},
+
+{
+        "nombre": "Naranja",
+        "imagen": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-orange-ice-cream-scoop-with-cherry-and-blackcurrant-transparent-photo-png-image_4991121.jpg",
+        "texto": "Helado a base de agua con sabor a naranja "
+
+},
+
+{
+        "nombre": "Vainilla",
+        "imagen": "https://png.pngtree.com/png-clipart/20201209/original/pngtree-vanilla-ice-cream-ball-png-image_5644290.jpg",
+        "texto": "Helado a base de crema endulzado con gusto a vainilla "
+
+},
+
+{
+        "nombre": "Chocolate",
+        "imagen": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-chocolate-ice-cream-scoop-with-chocolate-pieces-slice-png-image_4959830.jpg",
+        "texto": "Delicioso helado con trozos de chocolate"
+
+
+},
+
+{
+        "nombre": "Limón",
+        "imagen": "https://png.pngtree.com/png-clipart/20191120/original/pngtree-mango-ice-cream-scoop-with-chocolate-cream-png-image_5003329.jpg",
+        "texto": "Fresco, dulce y delicioso helado sabor limón"
+
+},
+
+{
+        "nombre": "Dulce de leche",
+        "imagen": "https://png.pngtree.com/png-clipart/20191120/original/pngtree-chocolate-cookies-ice-cream-scoop-transparent-photo-png-image_5003325.jpg",
+        "texto": "Delicioso helado de dulce de leche"
+
+},
+
+{
+        "nombre": "Frutilla al agua",
+        "imagen": "https://png.pngtree.com/png-clipart/20191120/original/pngtree-strawberry-orange-ice-cream-scoop-png-image_5045916.jpg",
+        "texto": "Helado a base de agua con sabor frutilla "
+
+},
+
+{
+        "nombre": "Crema americana",
+        "imagen": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-white-ice-cream-scoop-with-chocolate-liquid-png-image_4959825.jpg",
+        "texto": "Helado de crema americana "
+
+},
+
+{
+        "nombre": "Menta con chocolate",
+        "imagen": "https://png.pngtree.com/png-clipart/20210523/original/pngtree-mint-chocolate-chips-ice-cream-icecream-scoop-png-image_6325855.jpg",
+        "texto": "Delicioso helado de menta con trozos de chocolate"
+
+}
+]

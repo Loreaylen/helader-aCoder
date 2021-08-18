@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="media.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sahitya&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
+
+
+
+    <title>Heladería Coder</title>
+</head>
+
+<body>
+    <header>
+        <h1>HELADERÍA CODER</h1>
+        <h2>REALIZÁ TU PEDIDO</h2>
+        <nav> <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="sabores.html">SABORES</a></li>
+        </ul></nav>
+    </header>
+
+    <main>
+        <form id="form">
+            <div id="contenedor">
+                <div class="cantidades">
+                    <input type="radio" id="1kg" name="cantidad" value="1 kg" class="hidebtn">
+                    <label for="1kg">1 kg....$700</label>
+
+                    <input type="radio" id="mediokg" name="cantidad" value="1/2 kg" class="hidebtn">
+                    <label for="mediokg">1/2....$400</label>
+
+                    <input type="radio" id="cuartokg" name="cantidad" value="1/4 kg" class="hidebtn">
+                    <label for="cuartokg">1/4....$250</label>
+
+
+
+                </div>
+                <div class="sabores">
+                    <h3>SABORES</h3>
+
+                    <ul class="gustos"></ul>
+                    <ul class="gustos2"></ul>
+                   
+
+                </div>
+                <span id="mensaje"></span>
+            </div>
+
+            <button id="boton" type="submit" value="Agregar al Carrito">Agregar al carrito</button>
+
+        </form>
+
+        <div id="carrito">
+            <ul id="agregados">
+                
+         </ul>
+        </div>
+
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

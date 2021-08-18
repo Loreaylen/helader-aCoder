@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    width: 475px;
+    height: 284px;
+    left: 60px;
+    top: 35px;
+
+    font-family: Rye;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 60px;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 119px;
+
+
+    font-family: Sahitya;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 75px;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+
+    
+    position: absolute;
+    bottom:0;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    column-gap: 100px;
+}
+
+nav ul li {
+    list-style: none;
+    font-family: Sanchez;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 23px;
+text-align: center;
+border-bottom: 2px solid #A29B9B ;
+width: 160px;
+color: #706A6A;
+vertical-align: center;
+
+text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #706A6A;
+}
+main {
+    width: 100%;
+    height: 750px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    height: 620px;
+    width: 40%;
+}
+
+#contenedor {
+    width: 318px;
+    height: 620px;
+    position:relative;
+    background: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.cantidades {
+    width: 318px;
+    height: 200px;
+
+    padding-top: 20px;
+}
+
+.cantidades label {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: Sanchez;
+
+}
+
+
+label {
+    color: #f3f3f3
+}
+
+
+
+.hidebtn:checked+label {
+    color: #a1f5f1d7;
+    font-weight: bolder;
+    text-shadow: grey;
+}
+
+h3 {
+    font-family: Sanchez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    padding-bottom: 15px;
+
+    color: #f3f3f3;
+
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+h4 {
+    font-family: Sanchez;
+    font-weight: normal;
+    color: #f3f3f3;
+    font-size: 16px;
+    text-align: center;
+
+
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.gustos,
+.gustos2 {
+    font-family: Sanchez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    list-style-type: none;
+
+    color: #f3f3f3;
+
+}
+
+#boton {
+    margin-top: 20px;
+    cursor: pointer;
+    position:absolute;
+    top: 70vh;
+    left: 39%;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    color: #f3f3f3;
+    background-color: #000;
+    border:none;
+    font-size: 16px;
+    font-family: Sahitya;
+}
+
+.gustos {
+    padding-bottom: 15px;
+}
+
+.check {
+    display: none;
+}
+
+.hidebtn {
+    display: none;
+}
+
+input[type=checkbox]:checked+label {
+    color: #a1f5f1d7;
+    font-weight: bolder;
+    text-shadow: grey;
+}
+
+#carrito {
+    height: 620px;
+    width: 35%;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+
+#agregados {
+    width: 100%;
+    height: 93%;
+    overflow-y: scroll;
+   
+}
+
+.listado {
+    width: 100%;
+    border: 1px solid grey;
+    display: grid;
+    background-color: #f0efef;
+    grid-template-areas: "precio titulo subtitulo boton"
+                
+                "precio sabores sabores boton";
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 20% 30% 30% 20%;
+    min-height: 100px;
+    font-family: Sanchez;
+    font-size: 16px;
+}
+
+.listado h5 {
+    grid-area:titulo ;
+    font-size: 19px;
+}
+
+.listado h6 {
+    grid-area:subtitulo;
+}
+
+.listado p {
+    grid-area: sabores;
+}
+.listado span {
+    grid-area: precio;
+}
+
+.listado button {
+    grid-area: boton;
+}
+
+
+#mensaje {
+    font-size: 20px;
+    position: absolute;
+    top:-40px;
+    left: 0;
+    font-family: Sahitya;
+    font-weight: bolder;
+    font-size: 20px;
+    color: red;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+#total {
+    position: absolute;
+    bottom:0;
+    margin:auto;
+    padding: 10px;
+    font-family: Sanchez;
+    background-color:#000000;
+    color:#f3f3f3;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.botonQuitar {
+    border-radius: 10px;
+    background-color: #000;
+    color:#f3f3f3;
+    height: 30px;
+    width: 70px;
+    font-family: Sanchez;
+    border:none;
+}
+
+.tarjeta {
+    
+    height: 400px;
+    max-width: 300px;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+    
+}
+
+.tarjeta__header {
+    height: auto;
+    max-width: 100%;
+}
+
+.tarjeta__header img {
+    height: auto;
+    max-width: 100%;
+}
+
+.tarjeta__texto{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    font-size: 14px;
+    font-family: Sanchez;
+}
+
+.tarjeta__texto span {
+    font-family: Sahitya;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+#contenedorAjax {
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    justify-items: center;
+    padding:50px;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+

@@ -1,0 +1,464 @@
+@media screen and (max-width: 630px) {
+
+    /*HEADER*/
+
+    header {
+        width: 100%;
+        height: 350px;
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 36px;
+        text-align: center;
+        position: static;
+        padding-top: 20px;
+    }
+
+    h2 {
+        top: 180px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    nav ul {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 25px;
+    }
+
+    /*FIN HEADER*/
+
+    /*MAIN*/
+    main {
+        height: 1500px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 140px;
+        padding: 40px 0 40px 0;
+    }
+
+    form {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 700px;
+    }
+
+    #contenedor {
+        width: 100%;
+        height: 700px;
+        position: static;
+        left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #boton {
+        position: static;
+        justify-self: center;
+
+    }
+
+
+
+    .cantidades {
+        width: 100%;
+    }
+
+
+    .gustos,
+    .gustos2 {
+        padding: 10px 0 10px 0;
+    }
+
+
+    #carrito {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+    }
+
+    .listado {
+
+        grid-template-areas: "titulo subtitulo"
+            "precio  precio"
+            "sabores sabores"
+            "boton boton";
+        grid-template-columns: 50% 50%;
+        font-size: 14px;
+    }
+
+    .botonQuitar {
+        margin: 5px 0 5px 0;
+    }
+
+    #total {
+        position: absolute;
+        bottom: 0;
+    }
+
+    /*SABORES*/
+    #contenedorAjax{
+        
+        grid-template-columns: 100%;
+        padding: 0;
+        row-gap: 20px;
+        height: 4000px;
+       
+    }
+
+    .tarjeta {
+       
+        max-width: 90%;
+        height: auto;
+    }
+
+    .tarjeta__header img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    
+}
+
+@media (min-width: 370px) and (max-width:477px) {
+    /*SABORES*/
+
+    .tarjeta {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 478px) and (max-width:630px) {
+    /*SABORES*/
+
+    #contenedorAjax {
+        grid-template-columns: 50% 50%;
+        padding:20px;
+    }
+}
+
+
+@media (min-width: 631px) and (max-width: 820px) {
+
+    /*HEADER*/
+
+    header {
+        width: 100%;
+        height: 350px;
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 36px;
+        text-align: center;
+        position: static;
+        padding-top: 20px;
+    }
+
+    h2 {
+        top: 180px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 25px;
+    }
+
+    /*FIN HEADER*/
+
+    /*MAIN*/
+    main {
+        height: 1500px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 140px;
+        padding: 40px 0 40px 0;
+    }
+
+    form {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 700px;
+    }
+
+    #contenedor {
+        width: 80%;
+        height: 700px;
+        position: static;
+        left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #boton {
+        position: static;
+        justify-self: center;
+
+    }
+
+
+
+    .cantidades {
+        width: 100%;
+    }
+
+
+    .gustos,
+    .gustos2 {
+        padding: 10px 0 10px 0;
+    }
+
+
+    #carrito {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 80%;
+
+    }
+
+    .listado {
+
+        grid-template-areas: "titulo subtitulo"
+            "precio  precio"
+            "sabores sabores"
+            "boton boton";
+        grid-template-columns: 50% 50%;
+        font-size: 14px;
+    }
+
+    .botonQuitar {
+        margin: 5px 0 5px 0;
+    }
+
+    #total {
+        position: absolute;
+        bottom: 0;
+    }
+
+    /*SABORES*/
+    #contenedorAjax {
+        grid-template-columns: 50% 50%;
+
+    }
+
+    .tarjeta {
+        max-width: 90%;
+        height: 500px;
+    
+    }
+
+    .tarjeta__texto {
+        padding-top:20px;
+    }
+
+}
+
+@media (min-width: 821px) and (max-width: 1000px) {
+
+    /*HEADER*/
+
+    header {
+        width: 100%;
+        height: 350px;
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 36px;
+        text-align: center;
+        position: static;
+        padding-top: 20px;
+    }
+
+    h2 {
+        top: 180px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 25px;
+    }
+
+    /*FIN HEADER*/
+
+    /*MAIN*/
+    main {
+        height: 1500px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 140px;
+        padding: 40px 0 40px 0;
+    }
+
+    form {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 700px;
+    }
+
+    #contenedor {
+        width: 60%;
+        height: 700px;
+        position: static;
+        left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #boton {
+        position: static;
+        justify-self: center;
+
+    }
+
+
+
+    .cantidades {
+        width: 100%;
+    }
+
+
+    .gustos,
+    .gustos2 {
+        padding: 10px 0 10px 0;
+    }
+
+
+    #carrito {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 60%;
+
+    }
+
+    .listado {
+
+        grid-template-areas: "titulo subtitulo"
+            "precio  precio"
+            "sabores sabores"
+            "boton boton";
+        grid-template-columns: 50% 50%;
+        font-size: 16px;
+    }
+
+    .botonQuitar {
+        margin: 5px 0 5px 0;
+    }
+
+    #total {
+        position: absolute;
+        bottom: 0;
+    }
+
+
+
+
+    /*SABORES*/
+
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+
+    /*MAIN*/
+    main {
+        height: 900px;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 160px;
+
+    }
+
+  
+
+    #contenedor {
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+   #boton {
+       top:70vh;
+       left:37.5%
+   }
+
+
+
+    .cantidades {
+        width: 100%;
+    }
+
+
+    .gustos,
+    .gustos2 {
+        padding: 10px 0 10px 0;
+    }
+
+
+    #carrito {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 40%;
+
+    }
+
+    .listado {
+
+        grid-template-areas: "titulo subtitulo"
+            "precio  precio"
+            "sabores sabores"
+            "boton boton";
+        grid-template-columns: 50% 50%;
+        font-size: 16px;
+    }
+
+    .botonQuitar {
+        margin: 5px 0 5px 0;
+    }
+
+    #total {
+        position: absolute;
+        bottom: 0;
+    }
+}

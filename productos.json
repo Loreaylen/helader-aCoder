@@ -1,0 +1,66 @@
+[
+    {
+        "nombre": "Chocolate con almendras",
+        "tipo": "crema"
+    },
+
+    {
+        "nombre": "Crema americana",
+        "tipo": "crema"
+    },
+
+    {
+        "nombre": "Frutilla a la crema",
+        "tipo": "crema"
+    },
+
+    {
+        "nombre": "Vainilla",
+        "tipo": "crema"
+    },
+
+    {
+        "nombre": "Crema flan",
+        "tipo": "crema"
+    },
+
+    {
+        "nombre": "Dulce de leche",
+        "tipo": "crema"
+    },
+
+    {
+        "nombre": "Chocolate",
+        "tipo": "crema"
+    },
+
+    {
+        "nombre": "Menta",
+        "tipo": "crema"
+    },
+
+    {
+        "nombre": "Frutilla",
+        "tipo": "agua"
+    },
+
+    {
+        "nombre": "Manzana",
+        "tipo": "agua"
+    },
+
+    {
+        "nombre": "Limón",
+        "tipo": "agua"
+    },
+
+    {
+        "nombre": "Durazno",
+        "tipo": "agua"
+    },
+
+    {
+        "nombre": "Frambuesa",
+        "tipo": "agua"
+    }
+]
