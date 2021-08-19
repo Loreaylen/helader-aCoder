@@ -133,8 +133,6 @@ const agregarProducto = () => {
 
     carritoDeCompras.push(producto)
     guardarEnLocalStorage(carritoDeCompras)
-
-
     traerLocalStorage()
   
 }
@@ -180,49 +178,27 @@ const traerLocalStorage = () => {
 }
 
 
-const eliminarCarrito = (id) => {  
+const eliminarCarrito = (id) => {
 
     const items = JSON.parse(localStorage.getItem('carrito'));
-    let item = $('.listado')
-    const filtered = items.filter(item => item.id !== id);
-
+    const filtered = items.filter(item => item.id !== id); 
     localStorage.setItem('carrito', JSON.stringify(filtered));
+    
+    traerLocalStorage()
 
     for (objeto of items) {
         if (objeto.id === id) {
-            var indice = items.indexOf(objeto)
-
-        }
-    }
-
-    items.splice(indice, 1)
-    carritoDeCompras.splice(indice,1)
-
-    console.log(carritoDeCompras)
-    item[indice].remove() 
-
-    let nuevoTotal = 0;
-
-    items.forEach(element => {
-        return (nuevoTotal += element.precio)
-    })
-
-
-    verTotal(nuevoTotal)
+            let indice = items.indexOf(objeto)
+            carritoDeCompras.splice(indice, 1) 
+        } 
+    }  
 }
 
 // Eventos
 
 
 
-llamarAjax()
-
-$(document).ready(() => {
-    traerLocalStorage()
-})
-
-imprimirSabores()
-
+ 
 const form = document.getElementById("form")
 
 const submitForm = (event) => {
@@ -230,5 +206,11 @@ const submitForm = (event) => {
     agregarProducto()
 }
 
-form.addEventListener("submit", submitForm)
+form.addEventListener("submit", submitForm) 
 
+$(document).ready(() => {
+    traerLocalStorage()
+})
+
+imprimirSabores()
+llamarAjax()
