@@ -10,8 +10,9 @@ const input = document.getElementsByClassName('check')
 
 // Variables y constantes
 
-const carritoDeCompras = []
+const carritoDeCompras = JSON.parse(localStorage.getItem('carrito')) || [];
 const precioFinal = $(`<span id="total"></span>`)
+const precioFinalModal = $(`<span id="totalCompra"></span>`)
 let botonAgregar = $('#boton')
 let opcionCantidad = $('.hidebtn')
 let botonQuitar = $('.botonQuitar')
@@ -69,8 +70,11 @@ $(`<h4>AL AGUA</h4>`).insertBefore(".gustos2")
 
 const verTotal = (e) => {
 
-    precioFinal.html(`Total: ${e}`)
+    precioFinal.html(`Total: $${e}`)
     $(`#carrito`).append(precioFinal)
+    precioFinalModal.html(`Total: $${e}`)
+        
+    $("#totalCompra").append(precioFinalModal)
 
 }
 
@@ -156,7 +160,7 @@ const traerLocalStorage = () => {
 
     if (carritoLocalStorage) {  
         for (let e of carritoLocalStorage){ 
-            $("#agregados").append(  $(`<li class= "listado" style="display:none"  id=li${e.id}  
+            $("#agregados").append(  $(`<li class= "listado"   id=li${e.id}  
             >
             <h5>${e.cantidad}</h5> 
             <h6>ID: ${e.id}</h6> 
@@ -166,17 +170,13 @@ const traerLocalStorage = () => {
             </li>`
             ))
             
-            
-            
             $(".botonQuitar").click(() => eliminarCarrito(e.id)) 
-            $(`#li${e.id}`).fadeOut(100, () => {
-                
-                $(`#li${e.id}`).fadeIn(1000)
-            })
-
+        
+            
         }
         
- 
+       
+       
         let total = 0;
         carritoLocalStorage.forEach(element => {
             return (total += element.precio)
@@ -191,6 +191,9 @@ const traerLocalStorage = () => {
 
     
 }
+
+
+
 
 
 const eliminarCarrito = (id) => {
