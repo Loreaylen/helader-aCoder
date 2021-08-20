@@ -129,6 +129,13 @@
         height: auto;
     }
 
+    .modal {
+        width: 95%;   
+    }
+
+    .modal h5 {
+        font-size: 18px;
+    }
     
 }
 
@@ -275,6 +282,15 @@
         padding-top:20px;
     }
 
+
+    .modal {
+        width: 70%;   
+    }
+
+    .modal h5 {
+        font-size: 22px;
+    }
+    
 }
 
 @media (min-width: 821px) and (max-width: 1000px) {
@@ -386,7 +402,13 @@
         bottom: 0;
     }
 
+    .modal {
+        width: 60%;   
+    }
 
+    .modal h5 {
+        font-size: 22px;
+    }
 
 
     /*SABORES*/
@@ -465,5 +487,13 @@
     #total {
         position: absolute;
         bottom: 0;
+    }
+
+    .modal {
+        width: 50%;   
+    }
+
+    .modal h5 {
+        font-size: 24px;
     }
 }
