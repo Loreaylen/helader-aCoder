@@ -177,12 +177,11 @@ h4 {
 
 }
 
-#boton {
+#boton, #botonPagar {
     margin-top: 20px;
     cursor: pointer;
     position:absolute;
-    top: 70vh;
-    left: 39%;
+    
     width: 150px;
     height: 60px;
     border-radius: 10px;
@@ -191,6 +190,18 @@ h4 {
     border:none;
     font-size: 16px;
     font-family: Sahitya;
+}
+
+#boton { 
+    top: 70vh;
+    left: 39%;
+
+}
+
+#botonPagar {
+    top: 80vh;
+    left: 39%;
+
 }
 
 .gustos {

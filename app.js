@@ -66,7 +66,6 @@ $(`<h4>EN CREMA</h4>`).insertBefore(".gustos")
 
 $(`<h4>AL AGUA</h4>`).insertBefore(".gustos2")
 
-//////////////////////////////////////////////////////////////////////////////////////////////////
 
 const verTotal = (e) => {
 
@@ -134,6 +133,8 @@ const agregarProducto = () => {
     carritoDeCompras.push(producto)
     guardarEnLocalStorage(carritoDeCompras)
     traerLocalStorage()
+    
+    
   
 }
 
@@ -145,16 +146,17 @@ const guardarEnLocalStorage = (arr) => {
 
 
 const traerLocalStorage = () => {
+   
     let carritoLocalStorage = JSON.parse(localStorage.getItem('carrito'));  
     $("#agregados").text("")
 
+   
     
 
 
     if (carritoLocalStorage) {  
         for (let e of carritoLocalStorage){ 
-            $("#agregados").append(`<li class= "listado" id="lis" data-w=${e.id}
-            
+            $("#agregados").append(  $(`<li class= "listado" style="display:none"  id=li${e.id}  
             >
             <h5>${e.cantidad}</h5> 
             <h6>ID: ${e.id}</h6> 
@@ -162,19 +164,32 @@ const traerLocalStorage = () => {
             <span>$${e.precio}</span>
             <button class="botonQuitar">Eliminar</button>
             </li>`
-            )  
+            ))
+            
+            
+            
             $(".botonQuitar").click(() => eliminarCarrito(e.id)) 
+            $(`#li${e.id}`).fadeOut(100, () => {
+                
+                $(`#li${e.id}`).fadeIn(1000)
+            })
+
         }
+        
+ 
         let total = 0;
         carritoLocalStorage.forEach(element => {
             return (total += element.precio)
         })
 
+       
         
         verTotal(total)
     } else {
         carritoLocalStorage = []
     }
+
+    
 }
 
 
@@ -193,6 +208,9 @@ const eliminarCarrito = (id) => {
         } 
     }  
 }
+
+
+
 
 // Eventos
 
