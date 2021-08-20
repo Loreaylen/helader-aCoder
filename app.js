@@ -235,3 +235,31 @@ $(document).ready(() => {
 
 imprimirSabores()
 llamarAjax()
+
+
+
+//FUNCIONES DE MODAL
+
+
+$("#botonPagar").click(() => {
+
+    if (carritoDeCompras.length > 0) {
+
+
+    $(".modal__contenedor").fadeIn(600)
+    $(".modal__contenedor").css('display', 'flex')
+    $(".modal").hide()
+    $(".modal").slideDown(1000) 
+    }
+
+    else { alert("Agregue un producto al carrito")}
+}) 
+
+
+
+$("#modalQuitar").click(() => {
+    $(".modal__contenedor").fadeOut(400)    
+})
+
+
+   
