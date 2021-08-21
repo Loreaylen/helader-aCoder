@@ -196,6 +196,11 @@ h4 {
     
 }
 
+#linkPagar {
+    text-decoration: none;
+    color: #fff;
+}
+
 #boton { 
     top: 70vh;
     left: 39%;
@@ -441,3 +446,4 @@ input[type=checkbox]:checked+label {
     font-size: 20px;
     font-family: Sanchez;
 }
+
