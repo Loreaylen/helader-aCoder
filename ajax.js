@@ -3,8 +3,7 @@ var sabores;
 
 
 
-const imprimirSabores = (arr) => {
-    let indice = 0;
+const imprimirSabores = (arr) => { 
     for (let sabor of arr) {
         $("#contenedorAjax").append(`<div class="tarjeta">
 

@@ -10,8 +10,9 @@ const input = document.getElementsByClassName('check')
 
 // Variables y constantes
 
-const carritoDeCompras = []
+const carritoDeCompras = JSON.parse(localStorage.getItem('carrito')) || [];
 const precioFinal = $(`<span id="total"></span>`)
+const precioFinalModal = $(`<span id="totalCompra"></span>`)
 let botonAgregar = $('#boton')
 let opcionCantidad = $('.hidebtn')
 let botonQuitar = $('.botonQuitar')
@@ -19,6 +20,7 @@ let span = $('#mensajeSabores')
 var cantidadElegida;
 let carritoLocalStorage;
 let documentoJSON = "./productos.json"; // Lista de sabores
+let linkPagar = $("#linkPagar")
 
 
 
@@ -42,19 +44,19 @@ const imprimirSabores = (productos) => {
     let indice = 0;
 
     for (let producto in productos) {
-        
+
         if (productos[producto].tipo === "crema") {
             $(".gustos").append(`<li>
             <input type="checkbox" name="gustos" class="check" id="chk${indice++}" value="${productos[producto].nombre}">
             <label for="chk${indice - 1}" class="checkbtn">${productos[producto].nombre}</label>   
             </li>`)
         } else {
-            
+
             $(".gustos2").append(`<li>
             <input type="checkbox" name="gustos" class="check" id="chk${indice++}" value="${productos[producto].nombre}">
             <label for="chk${indice - 1}" class="checkbtn">${productos[producto].nombre}</label>   
             </li>`)
-            
+
         }
     }
 
@@ -66,13 +68,15 @@ $(`<h4>EN CREMA</h4>`).insertBefore(".gustos")
 
 $(`<h4>AL AGUA</h4>`).insertBefore(".gustos2")
 
-//////////////////////////////////////////////////////////////////////////////////////////////////
 
 const verTotal = (e) => {
 
-    precioFinal.html(`Total: ${e}`)
+    precioFinal.html(`Total: $${e}`)
     $(`#carrito`).append(precioFinal)
-
+    precioFinalModal.html(`Total: $${e}`)
+ 
+    $("#totalCompra").append(precioFinalModal)
+    
 }
 
 
@@ -133,10 +137,10 @@ const agregarProducto = () => {
 
     carritoDeCompras.push(producto)
     guardarEnLocalStorage(carritoDeCompras)
-
-
     traerLocalStorage()
-  
+
+
+
 }
 
 
@@ -147,81 +151,76 @@ const guardarEnLocalStorage = (arr) => {
 
 
 const traerLocalStorage = () => {
-    let carritoLocalStorage = JSON.parse(localStorage.getItem('carrito'));  
+
+    let carritoLocalStorage = JSON.parse(localStorage.getItem('carrito'));
     $("#agregados").text("")
 
-    
 
 
-    if (carritoLocalStorage) {  
-        for (let e of carritoLocalStorage){ 
-            $("#agregados").append(`<li class= "listado" id="lis" data-w=${e.id}
+
+
+    if (carritoLocalStorage) {
+        for (let e of carritoLocalStorage) {
             
+
+            $("#agregados").append($(`<li class= "listado"   id=li${e.id}  
             >
             <h5>${e.cantidad}</h5> 
             <h6>ID: ${e.id}</h6> 
             <p>${e.sabor}</p>
             <span>$${e.precio}</span>
             <button class="botonQuitar">Eliminar</button>
-            </li>`
-            )  
-            $(".botonQuitar").click(() => eliminarCarrito(e.id)) 
+            </li>`))
+            
+            $(".botonQuitar").click(() => eliminarCarrito(e.id))
+
+
         }
+
+       
+
         let total = 0;
         carritoLocalStorage.forEach(element => {
             return (total += element.precio)
         })
 
-        
+
+
         verTotal(total)
     } else {
         carritoLocalStorage = []
     }
+
+
 }
 
 
-const eliminarCarrito = (id) => {  
+
+
+
+const eliminarCarrito = (id) => {
 
     const items = JSON.parse(localStorage.getItem('carrito'));
-    let item = $('.listado')
     const filtered = items.filter(item => item.id !== id);
-
     localStorage.setItem('carrito', JSON.stringify(filtered));
+
+    traerLocalStorage()
 
     for (objeto of items) {
         if (objeto.id === id) {
-            var indice = items.indexOf(objeto)
-
+            let indice = items.indexOf(objeto)
+            carritoDeCompras.splice(indice, 1)
         }
     }
-
-    items.splice(indice, 1)
-    carritoDeCompras.splice(indice,1)
-
-    console.log(carritoDeCompras)
-    item[indice].remove() 
-
-    let nuevoTotal = 0;
-
-    items.forEach(element => {
-        return (nuevoTotal += element.precio)
-    })
-
-
-    verTotal(nuevoTotal)
 }
+
+
+
 
 // Eventos
 
 
 
-llamarAjax()
-
-$(document).ready(() => {
-    traerLocalStorage()
-})
-
-imprimirSabores()
 
 const form = document.getElementById("form")
 
@@ -232,3 +231,43 @@ const submitForm = (event) => {
 
 form.addEventListener("submit", submitForm)
 
+$(document).ready(() => {
+    traerLocalStorage()
+})
+
+linkPagar.click(() => {
+    $("#modalQuitar").trigger("click")
+    alert("¡Su pedido ha sido realizado con éxito!")
+
+    localStorage.removeItem("carrito")
+    location.reload()
+    
+})
+
+imprimirSabores()
+llamarAjax()
+
+
+
+//FUNCIONES DE MODAL
+
+
+$("#botonPagar").click(() => {
+
+    if (carritoDeCompras.length > 0) {
+
+
+        $(".modal__contenedor").fadeIn(600)
+        $(".modal__contenedor").css('display', 'flex')
+        $(".modal").hide()
+        $(".modal").slideDown(1000)
+    } else {
+        alert("Agregue un producto al carrito")
+    }
+})
+
+
+
+$("#modalQuitar").click(() => {
+    $(".modal__contenedor").fadeOut(400)
+})
