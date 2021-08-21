@@ -327,6 +327,7 @@ input[type=checkbox]:checked+label {
     width: 70px;
     font-family: Sanchez;
     border:none;
+    cursor: pointer;
 }
 
 .tarjeta {

@@ -160,24 +160,21 @@ const traerLocalStorage = () => {
 
 
     if (carritoLocalStorage) {
+        
         for (let e of carritoLocalStorage) {
-            
-
-            $("#agregados").append($(`<li class= "listado"   id=li${e.id}  
+            $("#agregados").append($(`<li class= "listado" id=li${e.id}  
             >
             <h5>${e.cantidad}</h5> 
             <h6>ID: ${e.id}</h6> 
             <p>${e.sabor}</p>
             <span>$${e.precio}</span>
-            <button class="botonQuitar">Eliminar</button>
+            <button class="botonQuitar" id="${e.id}">Eliminar</button>
             </li>`))
-            
-            $(".botonQuitar").click(() => eliminarCarrito(e.id))
-
-
+           
+            $(`#${e.id}`).click(() =>  eliminarCarrito(e.id) )
         }
 
-       
+ 
 
         let total = 0;
         carritoLocalStorage.forEach(element => {
@@ -210,8 +207,11 @@ const eliminarCarrito = (id) => {
         if (objeto.id === id) {
             let indice = items.indexOf(objeto)
             carritoDeCompras.splice(indice, 1)
+            $(`#li${id}`).fadeOut("1000")
         }
     }
+
+    
 }
 
 
